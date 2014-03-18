@@ -29,15 +29,15 @@ $english_array =  array(
 	),
 
 	'races' => array(
-		'Unknown',
-		'Human',
+		0	=> 'Unknown',
+		1	=> 'Human',
 	),
 	'factions' => array(
-		'Normal',
-		'MonsterPlay'
+		'normal'		=> 'Normal',
+		'monsterplay'	=> 'MonsterPlay'
 	),
 	'lang' => array(
-		'torchlight2' => 'Torchlight 2',
+		'torchlight2'	=> 'Torchlight 2',
 	),
 );
 

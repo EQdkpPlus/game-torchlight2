@@ -22,21 +22,54 @@ if ( !defined('EQDKP_INC') ){
 
 if(!class_exists('torchlight2')) {
 	class torchlight2 extends game_generic {
-		public static $shortcuts = array();
+		public $version			= '0.1.2';
 		protected $this_game	= 'torchlight2';
 		protected $types		= array('classes', 'races', 'factions', 'filters');
-		public $icons			= array('classes', 'classes_big', 'races', 'events');
 		protected $classes		= array();
 		protected $races		= array();
 		protected $factions		= array();
 		protected $filters		= array();
 		public $langs			= array('english', 'german');
 
+		protected $class_dependencies = array(
+			array(
+				'name'		=> 'faction',
+				'type'		=> 'factions',
+				'admin' 	=> true,
+				'decorate'	=> false,
+				'parent'	=> false,
+			),
+			array(
+				'name'		=> 'race',
+				'type'		=> 'races',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'parent'	=> false
+			),
+			array(
+				'name'		=> 'class',
+				'type'		=> 'classes',
+				'admin'		=> false,
+				'decorate'	=> true,
+				'primary'	=> true,
+				'colorize'	=> true,
+				'roster'	=> true,
+				'recruitment' => true,
+				'parent'	=> false
+			),
+		);
+		
+		protected $class_colors = array(
+			1	=> '#2495C4',
+			2	=> '#47AFA7',
+			3	=> '#EB9837',
+			4	=> '#B71F13',
+		);
+
 		protected $glang		= array();
 		protected $lang_file	= array();
 		protected $path			= false;
 		public $lang			= false;
-		public $version			= '0.1.2';
 
 		/**
 		* Initialises filters
@@ -56,13 +89,6 @@ if(!class_exists('torchlight2')) {
 			}
 		}
 		public function get_OnChangeInfos($install=false){
-			//classcolors
-			$info['class_color'] = array(
-				1	=> '#2495C4',
-				2	=> '#47AFA7',
-				3	=> '#EB9837',
-				4	=> '#B71F13',
-			);
 			$info['aq'] = array();
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
@@ -72,5 +98,4 @@ if(!class_exists('torchlight2')) {
 		}
 	}
 }
-if(version_compare(PHP_VERSION, '5.3.0', '<')) registry::add_const('short_torchlight2', torchlight2::$shortcuts);
 ?>

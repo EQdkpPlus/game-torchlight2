@@ -28,15 +28,15 @@ $german_array = array(
 		4	=> 'Embermage',
 	),
 	'races' => array(
-		'Unknown',
-		'Mensch',
+		0	=> 'Unknown',
+		1	=> 'Mensch',
 	),
 	'factions' => array(
-		'Normal',
-		'MonsterPlay'
+		'normal'		=> 'Normal',
+		'monsterplay'	=> 'MonsterPlay'
 	),
 	'lang' => array(
-		'torchlight2' => 'Torchlight 2',
+		'torchlight2'	=> 'Torchlight 2',
 	),
 );
 
