@@ -88,8 +88,8 @@ if(!class_exists('torchlight2')) {
 				}
 			}
 		}
-		public function get_OnChangeInfos($install=false){
-			$info['aq'] = array();
+		public function install($install=false){
+			
 
 			//Do this SQL Query NOT if the Eqdkp is installed -> only @ the first install
 			#if($install){
