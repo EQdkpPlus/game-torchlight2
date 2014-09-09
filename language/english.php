@@ -37,7 +37,14 @@ $english_array =  array(
 		'monsterplay'	=> 'MonsterPlay'
 	),
 	'lang' => array(
-		'torchlight2'	=> 'Torchlight 2',
+		'torchlight2'				=> 'Torchlight 2',
+		'uc_race'					=> 'Race',
+		'uc_class'					=> 'Class',
+
+		// Admin Settings
+		'core_sett_fs_gamesettings'	=> 'Torchlight 2 Settings',
+		'uc_faction'				=> 'Faction',
+		'uc_faction_help'			=> 'Select the default faction',
 	),
 );
 
