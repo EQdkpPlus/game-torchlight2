@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('torchlight2')) {
 	class torchlight2 extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '0.1.2';
+		public $version				= '1.0.0';
 		protected $this_game		= 'torchlight2';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
